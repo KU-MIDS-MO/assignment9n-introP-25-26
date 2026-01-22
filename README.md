@@ -1,11 +1,11 @@
 # Introduction to Programming
-## Winter Semester 2024/25 -- Assignment 1
+## Winter Semester 2025/26 -- Assignment 9
 
-1. A number is a palindrome if the $i$-th decimal digit from the front coincides with the $i$-th decimal digit from the back.  E.g., 18781 is a palindrome, whereas 84736 is not.  Write a function is_palindrome(n) that returns True if $n$ is a palindrome, and False otherwise.
+1. (From GTG R-2.5.) The file `credit_card.py` contains the code of the credit card example from the book.  Revise the `charge` and `make_payment` methods to raise a `ValueError` if the caller does not send a number.
 
-2. Write a Python function sum_of_squares(n) that calculates the sum of squares of all odd numbers up to and including n. The function should return the sum as a float if the input is valid, or return -1 if the input is invalid. Additionally: If the input is not a positive whole number, return -1 to indicate an error If the input is greater than 1000, print a warning message but still perform the calculation.
+2. (From GTG R-2.9ff.) The file `vector.py` contains the code of the vector class from the book.  Add the following methods to the class: `__sub__` so that the expression `u-v` returns a new vector instance representing the difference between two vectors and `__neg__` so that the expression `-v` returns a new vector instance whose coordinates are all the negated values of the respective coordinates of `v`.  If the vectors do not have the same dimension, raise an error as for `__add__` in the example code.
 
-3. Write a Python function count_odd_digits(n) that takes a non-negative integer n and returns the count of odd digits in that number. Your function cannot use multiplication, modulo, or division operators. You cannot convert the number to a string or use any string operations. If the input is negative, return -1 to indicate an error. Although it's an unconventional way to do this task with the above-mentioned constraints, the goal of the task is to encourage you to think more creatively.
+3. Continuing Problem 2: Implement the `__mul__` method so that `u*v` returns a scalar that represents the dot product of the vectors `u` and `v`, i.e., $u_1 \, v_1 + \cdots + u_d \, v_d$, and that `u*a` results in scalar multiplication if `a` is a number.  Further, implement the `__rmul__` method to make sure that `a*v` is the same as `v*a` when `v` is a vector and `a` is a number.
 
-4. Write a Python function, is_odd(k), that takes an integer value and returns True if k is an odd number, and False otherwise. However, your function can not use the multiplication, modulo, or division operators.
-
+4. Continuing Problem 3: Implement the method `cross` so that `u.cross(v)` gives the cross product of the vectors `u` and `v` if both of their length is 3.  Raise a value error otherwise.
+   
